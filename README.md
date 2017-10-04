@@ -38,8 +38,8 @@
 |------|----|-------|
 |body|text||
 |image|string||
-|user_id|integer|null: false, unique: true|
-|group_id|integer|null: false, unique: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
