@@ -1,0 +1,42 @@
+%header
+  .heading
+    %p チャットグループ作成されました
+.contents
+  .left-content
+    .left-content__top
+      .user-name
+        Huong Tra
+      %a{href: ''}
+        %i.fa.fa-cog
+      %a{href:  ''}
+        %i.fa.fa-pencil-square-o
+
+    .left-content__bottom
+      .group-name
+        %h3 Test
+        %p まだメッセージはありません
+      .group-name
+        %h3 Test
+        %p まだメッセージはありません
+
+  .right-content
+    .right-content__top
+      .group-member
+        .group-name  Test
+        .member-name  Member:Hiroki
+      .button-edit
+        %a.button  EDIT
+
+    .right-content__display-message
+      .detail
+        .name Huong Tra
+        .message Nice to meet you
+        .time 2017/10/12
+
+    .right-content__input-message
+      %form.input-message
+        %input.message{type: "text", placeholder: "Type a message"}
+        %input.submit{type: "submit", value: "SEND"}
+          %label.image-file
+            %input.image{type: "file", name: "chat-file", value: ""}
+              %i.fa.fa-picture-o
