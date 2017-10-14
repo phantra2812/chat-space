@@ -1,7 +1,6 @@
 $white-colour: #FFFFFF;
 $blue-colour: #38AEF0;
 $black-colour: #434A54;
-
 .heading {
 	background-color: $blue-colour;
 	height: 30px;
@@ -24,13 +23,12 @@ $black-colour: #434A54;
 		width: 300px;
 		background-color: #2f3e51;
 		float: left;
-		height: 100%;
+		height: 100vh;
 
 
 		&__top {
 			background-color: #253141;
 			padding-top: 30px;
-			position: relative;
 
 			.user-name {
 				font-size: 20px;
@@ -78,7 +76,7 @@ $black-colour: #434A54;
 	/*background-color: #AAAAAA;*/
 	width: calc( 100vw - 300px );
 	float: left;
-	height: 100%;
+	height: 100vh;
 
 	&__top {
 		height: 15%;
