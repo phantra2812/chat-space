@@ -1,6 +1,5 @@
 %header
   .heading
-    %p チャットグループ作成されました
 .contents
   .left-content
     .left-content__top
@@ -8,7 +7,7 @@
         Huong Tra
       = link_to root_path do
         %i.fa.fa-cog
-      = link_to root_path do
+      = link_to edit_user_path(current_user) do
         %i.fa.fa-pencil-square-o
 
     .left-content__bottom
@@ -23,7 +22,7 @@
     .right-content__top
       .group-member
         .group-name  Test
-        .member-name  Member:Hiroki
+        .member-name= current_user.name
       .button-edit
         %a.button  EDIT
 
