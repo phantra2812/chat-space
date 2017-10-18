@@ -4,12 +4,11 @@ class GroupsController < ApplicationController
 	end
 
 	def create
-		@group = Group.create(group_params)
+		@group = Group.new(group_params)
 		if @group.save
 		   redirect_to :root, notice: 'グループ作成成功'
 		else render :new
 		end
-
 	end
 
 	private
