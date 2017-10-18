@@ -8,8 +8,8 @@ class GroupsController < ApplicationController
     if @group.new
       redirect_to :root, notice: 'グループ作成成功'
     else render :new
+    end
   end
-end
 
 private
   def group_params
