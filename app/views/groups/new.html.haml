@@ -1,0 +1,44 @@
+.chat-group-form
+  %h1 新規チャットグループ
+  = form_for @group do |f|
+    .chat-group-form__errors
+      - if @group.errors.any?
+        %h2
+          = @group.errors.count
+          件のエラーが発生しました
+        %ul
+          - @group.errors.full_messages.each do |msg|
+            %li
+              = msg
+
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        .field-label
+          = f.label :name, 'グループ名', class: "chat-group-form__label"
+      .chat-group-form__field--right
+        .field-label
+          = f.text_field :name, placeholder: "グループ名を入力ください", class: "chat-group-form__input"
+
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        .field-label
+          = f.label "チャットメンバーを追加", class: "chat-group-form__label"
+      .chat-group-form__field--right
+        .field-label
+          = f.text_field :name, placeholder: "追加したいユーザー名を入力してください", class: "chat-group-form__input"
+
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        .field-label
+          =f.label "チャットメンバー", class: "chat-group-form__label"
+      .chat-group-form__field--right
+        = f.collection_check_boxes( :user_ids, User.all, :id, :name)
+
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+      .chat-group-form__field--right
+        = f.submit "name": "commit", "value": "Save", "data-disable-with": "Save", class: "chat-group-form__action-btn"
+
+
+
+
