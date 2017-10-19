@@ -3,7 +3,6 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-<<<<<<< HEAD
 	def create
 		@group = Group.new(group_params)
 		if @group.save
@@ -16,7 +15,7 @@ class GroupsController < ApplicationController
 	def group_params
 		params.require(:group).permit(:name, user_ids: [])
 	end
-=======
+
   def create
     @group = Group.create(group_params)
     if @group.new
@@ -29,5 +28,4 @@ class GroupsController < ApplicationController
   def group_params
       params.require(:group).permit(:name)
   end
->>>>>>> origin/Create-New-group-chat
 end
