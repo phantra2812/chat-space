@@ -3,20 +3,14 @@
 .contents
   .left-content
     .left-content__top
-      .user-name
-        Huong Tra
-      = link_to root_path do
+      .user-name= current_user.name
+      = link_to new_group_path do
         %i.fa.fa-cog
       = link_to edit_user_path(current_user) do
         %i.fa.fa-pencil-square-o
 
     .left-content__bottom
-      .group-name
-        %h3 Test
-        %p まだメッセージはありません
-      .group-name
-        %h3 Test
-        %p まだメッセージはありません
+      = render '/groups/group'
 
   .right-content
     .right-content__top
