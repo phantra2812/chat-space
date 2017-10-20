@@ -17,3 +17,13 @@
 .byebug_history
 
 app/assets/javascripts/messages.coffee
+
+app/controllers/groups_controller.rb
+
+app/controllers/groups_controller.rb
+
+app/views/groups/edit.html.haml
+
+config/routes.rb
+
+app/controllers/groups_controller.rb

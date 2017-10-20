@@ -12,7 +12,16 @@ class GroupsController < ApplicationController
     end
   end
 
+<<<<<<< Updated upstream
   def update
+=======
+  def edit
+    @group = find_group
+  end
+
+  def update
+    @group = find_group
+>>>>>>> Stashed changes
     if @group.update(group_params)
       redirect_to :root, notice: 'グループ更新成功'
     else render :edit
@@ -25,6 +34,10 @@ private
   end
 
   def find_group
+<<<<<<< Updated upstream
     @group = Group.find(params[:id])
+=======
+    Group.find(params[:id])
+>>>>>>> Stashed changes
   end
 end
