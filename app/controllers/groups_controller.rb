@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  before_action :find_group, only: [:edit, :update]
   def new
     @group = Group.new
   end
@@ -9,10 +10,6 @@ class GroupsController < ApplicationController
       redirect_to :root, notice: 'グループ作成成功'
     else render :new
     end
-  end
-
-  def edit
-    @group = find_group
   end
 
   def update
@@ -29,6 +26,6 @@ private
   end
 
   def find_group
-    Group.find(params[:id])
+    @group = Group.find(params[:id])
   end
 end
