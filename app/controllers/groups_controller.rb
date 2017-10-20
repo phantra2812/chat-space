@@ -13,7 +13,6 @@ class GroupsController < ApplicationController
   end
 
   def update
-    @group = find_group
     if @group.update(group_params)
       redirect_to :root, notice: 'グループ更新成功'
     else render :edit
