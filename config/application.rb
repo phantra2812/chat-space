@@ -22,5 +22,7 @@ module PairsLike
       g.test_framework false
     end
       config.i18n.default_locale = :ja
+      config.active_record.default_timezone = :local
+      config.time_zone = 'Tokyo'
   end
 end

@@ -11,25 +11,3 @@
 
     .left-content__bottom
       = render 'groups/group'
-
-  .right-content
-    .right-content__top
-      .group-member
-        .group-name  Test
-        .member-name= current_user.name
-      .button-edit
-        %a.button  EDIT
-
-    .right-content__display-message
-      .detail
-        .name Huong Tra
-        .message Nice to meet you
-        .time 2017/10/12
-
-    .right-content__input-message
-      %form.input-message
-        %input.message{type: "text", placeholder: "Type a message"}
-        %input.submit{type: "submit", value: "SEND"}
-          %label.image-file
-            %input.image{type: "file", name: "chat-file", value: ""}
-              %i.fa.fa-picture-o

@@ -101,16 +101,19 @@ $black-colour: #434A54;
 }
 
 	.right-content__display-message {
-		height: calc( 100% - 15% - 90px );
+		height: calc( 100% - 15% - 97px );
 		background-color: #AAAAAA;
+		overflow-y: scroll;
+		width: 100%;
 
 		.detail {
-			padding: 46px 40px 40px;
+			padding: 20px 40px 10px;
 
 			.name{
 				font-size: 16px;
 				font-weight: bold;
 				color: $black-colour;
+				float: left;
 			}
 			.message {
 				font-size: 14px;
@@ -122,8 +125,7 @@ $black-colour: #434A54;
 			.time {
 				font-size: 12px;
 				color: #434A54;
-				float: left;
-				padding: 0 10px 10px;
+				padding: 0 60px 10px;
 			}
 		}
 	}
@@ -145,14 +147,24 @@ $black-colour: #434A54;
 				position: relative;
 			}
 			.submit {
-				height: 50px;
+				height: 58px;
 				width: 100px;
 				text-align: center;
 				background-color: $blue-colour;
 				color: #fff;
+				position: absolute;
+				margin: 20px 0 20px 10px;
 				// margin: 20px 0;
 				// position: absolute;
 			}
+
+			.label {
+				position: absolute;
+				left: 900px;
+				bottom: 30px;
+				display: none;
+			}
+
 			.image-file {
 				position: absolute;
 				top: 0;
@@ -175,8 +187,8 @@ $black-colour: #434A54;
 
     		.fa-picture-o:before {
     			content: "\f03e";
-    			position: absolute;
-
+    			position: relative;
+    			left: 60px;
     		}
 
 			}
