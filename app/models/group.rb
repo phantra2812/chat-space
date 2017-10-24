@@ -14,6 +14,6 @@ def last_messages
      self.messages.last.body
     end
   end
-  end
+end
 
 end

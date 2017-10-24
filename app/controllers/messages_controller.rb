@@ -15,7 +15,6 @@ before_action :find_group, only: [:index, :create]
 		   flash.now[:alert] = 'メッセージを入力してください'
 		   render :index
 		end
-
 	end
 
 	private
