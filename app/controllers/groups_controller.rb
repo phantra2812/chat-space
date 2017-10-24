@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_action :find_group, only: [:edit, :update]
+
   def index
     @group = current_user.groups
   end
