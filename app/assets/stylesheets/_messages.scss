@@ -101,8 +101,10 @@ $black-colour: #434A54;
 }
 
 	.right-content__display-message {
-		height: calc( 100% - 15% - 90px );
+		height: calc( 100% - 15% - 97px );
 		background-color: #AAAAAA;
+		overflow-y: scroll;
+		width: 100%;
 
 		.detail {
 			padding: 20px 40px 10px;
