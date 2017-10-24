@@ -27,3 +27,5 @@ app/views/groups/edit.html.haml
 config/routes.rb
 
 app/controllers/groups_controller.rb
+
+public/uploads/message/image/
