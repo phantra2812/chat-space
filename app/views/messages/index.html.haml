@@ -1,0 +1,40 @@
+%header
+  .heading
+.contents
+  .left-content
+    .left-content__top
+      .user-name= current_user.name
+      = link_to new_group_path do
+        %i.fa.fa-cog
+      = link_to edit_user_path(current_user) do
+        %i.fa.fa-pencil-square-o
+
+    .left-content__bottom
+      = render 'groups/group'
+
+  .right-content
+    .right-content__top
+      .group-member
+        .group-name= @group.name
+        .member-name= current_user.name
+      .button-edit
+        %a.button
+        = link_to "EDIT", edit_group_path(@group)
+
+    .right-content__display-message
+      .display
+      - @messages.each do |message|
+        .detail
+          .name= message.user.name
+          .time= message.created_at.strftime("%Y-%m-%d %H:%M:%S")
+          .message= message.body
+          = image_tag message.image
+
+    .right-content__input-message
+      .input-message
+        = form_for [@group, @message] do |f|
+          = f.text_field :body, placeholder: "Type a message", class: "message"
+          = f.label :image do
+            %i.fa.fa-picture-o
+          = f.file_field :image , class: "image"
+          = f.submit "type": "submit", "value": "SEND", "data-disable-with": "SEND", class: "submit"
