@@ -29,3 +29,5 @@ config/routes.rb
 app/controllers/groups_controller.rb
 
 public/uploads/message/image/
+
+public/uploads/tmp
