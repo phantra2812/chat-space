@@ -8,23 +8,21 @@ describe MessagesController, type: :controller do
     context 'when user logged in' do
       before do
       login_user user
+      get :index, params: { group_id: group }
+
     end
 
     describe 'GET #index' do
 
       it "assigns the requested group to @group" do
-        get :index, params: { group_id: group }
         expect(assigns(:group)).to eq (group)
       end
 
       it "assigns the requested message to @message" do
-        message = Message.new
-        get :index, params: { group_id: group }
-        expect(assigns(:message).attributes).to eq (message.attributes)
+        expect(assigns(:message)).to be_a_new Message
       end
 
       it "renders the: index template" do
-        get :index, params: { group_id: group }
         expect(assigns(:group)).to render_template :index
       end
     end
