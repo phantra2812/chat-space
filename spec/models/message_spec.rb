@@ -20,7 +20,6 @@ describe Message do
     it "is invalid without body, image" do
       message = build(:message, body: nil, image: nil)
       message.valid?
-
       expect(message.errors[:body_or_image]).to include("を入力してください")
     end
 
