@@ -10,7 +10,11 @@ before_action :find_group, only: [:index, :create]
 		@messages = @group.messages
 		@message = Message.new(message_params)
 		if @message.save
-			redirect_to group_messages_path, notice: 'メッセージ送信成功'
+			respond_to do |format|
+				format.html { redirect_to group_messages_path(params[:group_id]), notice: 'メッセージ送信成功' }
+				format.json
+			end
+
 		else
 		   flash.now[:alert] = 'メッセージを入力してください'
 		   render :index
