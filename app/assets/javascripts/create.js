@@ -27,7 +27,6 @@ $(document).on('turbolinks:load',(function(){
       contentType:  false
     })
     .done (function(data) {
-      console.log(data.image)
       var html = buildHTML(data);
       $('.right-content__display-message').append(html);
       $('#message_body').val('');
