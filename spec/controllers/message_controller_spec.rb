@@ -9,7 +9,6 @@ describe MessagesController, type: :controller do
       before do
       login_user user
       get :index, params: { group_id: group }
-
     end
 
     describe 'GET #index' do
