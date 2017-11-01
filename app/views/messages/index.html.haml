@@ -16,7 +16,9 @@
     .right-content__top
       .group-member
         .group-name= @group.name
-        .member-name= current_user.name
+        .member-name
+          - @group.users.each do |user|
+            = user.name
       .button-edit
         %a.button
         = link_to "EDIT", edit_group_path(@group)
