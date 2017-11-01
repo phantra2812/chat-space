@@ -64,7 +64,7 @@ $(document).on('turbolinks:load',(function(){
     })
     })
     .fail(function(){
-      alert('error')
+      alert('error');
     })
   }, 5000);
 }))
