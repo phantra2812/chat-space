@@ -33,7 +33,7 @@ $(document).on('turbolinks:load',(function(){
       $('#message_body').val('');
       $('.right-content__display-message').animate({ scrollTop: $('.right-content__display-message')[0].scrollHeight}, 'slow');
       $('.submit').removeAttr('disabled');
-      $this.reset
+      $this.reset;
     })
 
     .fail(function(){
