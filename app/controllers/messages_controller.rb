@@ -4,6 +4,10 @@ before_action :find_group, only: [:index, :create]
 	def index
 		@message = Message.new
 		@messages = @group.messages
+		respond_to do |format|
+			format.html
+			format.json {	@new_messages = @group.messages.where('id > ?', params[:message][:id]) }
+		end
 	end
 
 	def create
