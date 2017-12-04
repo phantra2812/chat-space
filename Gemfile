@@ -66,6 +66,12 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-turbolinks'
 
+gem 'capistrano'
+gem 'capistrano-rbenv'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano3-unicorn'
+
 group :production do
   gem 'unicorn'
 end
